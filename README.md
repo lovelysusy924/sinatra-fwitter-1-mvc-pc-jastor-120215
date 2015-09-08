@@ -1,5 +1,7 @@
 # Sinatra Fwitter 1 MVC
 
+## Outline
+
 ## Objectives
 
 1. Objective 1
