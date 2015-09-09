@@ -27,8 +27,28 @@ Fork and clone this repository to get started!
 
 To being, we'll be building out the Sinatra file structure from scratch. While we do, we'll talk about what each file is doing and the different responsibilites of our application. We could, if we wanted to, write our entire application in one file, but it would be very difficult to read and debug. Keeping things organized is called "seperation of concerns" and is an important concept when prgoramming. Let's start building out our file structure. 
 
+### 1). Gemfile
 
+What's the first thing we do when running a Sinatra application? If you answered `rackup` or `shotgun`, you're almost right. Before we even start up our server, we run `bundle install`. This command tells the bundler gem to look in the Gemfile of the main directory and install any of the gems listed there from rubygems.org. Remember, gems are just prewritten bundles of code that we can use in our application. Before we can use any of them, such as `sinatra` or `shotgun`, we want to make sure they're installed on our system. 
+
+Create a Gemfile by running `touch Gemfile` from the command line. Inside, add the following code snippets:
+
+```ruby
+source "https://rubygems.org"
+
+gem "sinatra"
+
+group :development do
+  gem "pry"
+  gem "shotgun"
+  gem "tux"
+end
+```
+
+This first line tells bundler to use https://rubygems.org to locate and install gems, and to download the gems `sinatra`, `pry`, `shotgun` and `tux`, two gems we'll use for debugging. We've added those into a group called `development` - this tells bundler only to install them locally on our development machines, not in production.
+
+Once the code's been added, go ahead and run `bundle install`. Bundler will install those four gems, plus any gems that they depend on to work properly. 
 
 ## Resources
 
-* [Stack Exchange](http://www.stackexchange.com) - [Some Question on Stack Exchange](http://www.stackexchange.com/questions/123)
+
