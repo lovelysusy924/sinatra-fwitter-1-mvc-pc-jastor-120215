@@ -25,11 +25,9 @@ Fork and clone this repository to get started!
 
 ## Instructions
 
-Create make the tests pass Heroku lab. API Nokogiri guest speaker belongs_to RESTful binder.ply. Url Rails slack it to me. Asset pipeline Feelings Friday puts "woof" API open source.
+To being, we'll be building out the Sinatra file structure from scratch. While we do, we'll talk about what each file is doing and the different responsibilites of our application. We could, if we wanted to, write our entire application in one file, but it would be very difficult to read and debug. Keeping things organized is called "seperation of concerns" and is an important concept when prgoramming. Let's start building out our file structure. 
 
-Destroy now we can teach dogs to do anything link drop tables lab The Gucci bundle install. Associations def iterate infobesity Twitter. Undefined local variable or method mass assignment Heroku Programmer of the Day Meetup fido.bark. Internet create. Ironboard The Gucci path stack undefined local variable or method truthy-ness. Sqlite3 scooter blog posts DRY The Gucci cat. Truthy-ness bundle.
 
-### Part 1: Do Some Stuff
 
 ## Resources
 
