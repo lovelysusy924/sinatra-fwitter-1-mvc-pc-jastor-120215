@@ -9,8 +9,17 @@
 
 ## Objectives
 
-1. Objective 1
-2. Objective 2
+1. Combine everything that we've learned into a complete Sinatra web application.  
+2. Understand the difference between class methods and instance methods
+3. Understand `self` and how to use it in Ruby
+4. Create new instances of of Ruby classes
+5. Pass data from our application controller into our view. 
+6. Use ERB to combine HTML and Ruby. 
+
+
+## Overview
+
+
 
 ## Instructions
 
