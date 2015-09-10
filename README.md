@@ -18,7 +18,7 @@ Fork and clone this repository to get started!
 
 ## Instructions
 
-To being, we'll be building out the Sinatra file structure from scratch. While we do, we'll talk about what each file is doing and the different responsibilites of our application. We could, if we wanted to, write our entire application in one file, but it would be very difficult to read and debug. Keeping things organized is called "seperation of concerns" and is an important concept when prgoramming. Let's start building out our file structure. 
+To begin, we'll be building out the Sinatra file structure from scratch. While we do, we'll talk about what each file is doing and the different responsibilites of our application. We could, if we wanted to, write our entire application in one file, but it would be very difficult to read and debug. Keeping things organized is called "seperation of concerns" and is an important concept when prgoramming. Let's start building out our file structure. 
 
 ### 1). Gemfile
 
