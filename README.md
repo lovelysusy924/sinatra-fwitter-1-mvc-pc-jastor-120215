@@ -38,13 +38,13 @@ group :development do
 end
 ```
 
-This first line tells bundler to use https://rubygems.org to locate and install gems, and to download the gems `sinatra`, `pry`, `shotgun` and `tux`, two gems we'll use for debugging. We've added those into a group called `development` - this tells bundler only to install them locally on our development machines, not in production.
+This first line tells bundler to use https://rubygems.org to locate and install gems. Next, bundler will download and install each gem listed, in this case `sinatra`, `pry`, `shotgun` and `tux`. We've added the last three into a group called `development` - this tells bundler only to install them locally on our development machines, not on our production server.
 
 Once the code's been added, go ahead and run `bundle install`. Bundler will install those four gems, plus any gems that they depend on to work properly. 
 
 ### 2). environment.rb
 
-After running bundle install, we know that all of the needed gems are installed on our system, but we haven't actually required them in our application - they're installed, but we're not loading them. By convention, our environment setup is handled by a file called `environment.rb`, located in a directory called `config`, short for configuration.
+After running bundle install, all of the needed gems will be installed on our system, but we haven't actually required them in our application. They're installed, but we're not loading them. By convention, our environment setup is handled by a file called `environment.rb`, located in a directory called `config`, short for configuration.
 
 Make a config directory with `mkdir config` and then create an `environment.rb` file inside of it. For now, all our environment file needs to do is make sure every gem in our Gemfile is required. Bundler provides us with a method to do this. Add the following code to your environment file:
 
@@ -62,11 +62,11 @@ require 'pry'
 require 'shotgun'
 # etc...
 ```
-It's way easier to use the Bundler's require method - that way, any Gems that we add will be loaded up for us automatically. 
+It's way easier to use the Bundler's require method - that way, any gems that we add will be loaded up for us automatically. 
 
 ### 3). config.ru
 
-Now that your environment is setup properly, we want to actually start our application. If you answered `rackup` or `shotgun` before, give yourself a pat on the back. When you start your server with the `rackup` or `shotgun` command, our app looks for a file called `config.ru` with instructions for how the application should behave. In the root of this directory, create a file called `config.ru` and add the following code: 
+Now that our environment is set up properly, we want to actually start our application. If you answered `rackup` or `shotgun` before, give yourself a pat on the back. When you start your server with the `rackup` or `shotgun` command, our app looks for a file called `config.ru` and executes the code in that file. In the root of this directory, create a file called `config.ru` and add the following code: 
 
 ```ruby
 require './app/controllers/application_controller'
@@ -74,7 +74,7 @@ require './app/controllers/application_controller'
 run ApplicationController
 ```
 
-Here, we're simply requiring a file called `application_controller` and starting up our ApplicationController class. We haven't actually created this yet - let's do that now!
+Here, we're simply requiring a file called `application_controller` and starting up our ApplicationController class. We haven't actually created this yet, but don't worry - we'll do that shortly.
 
 ### 4). app directory
 
@@ -286,10 +286,11 @@ Now, we'll be able to access that data in our controller!
 
 ### 8). Putting It All Together
 
-Now, let's setup our app to display all of the tweets on the index page. First, let's create an instance variable called `@tweets` and set it equal to our `.all` method.
+Now, let's setup our app to display all of the tweets on the index page. First, we need to require our model file in the controller, otherwise we won't have access to the Tweet model we created. Next, let's create an instance variable called `@tweets` and set it equal to our `.all` method.
 
 ```ruby
 require './config/environment'
+require './app/models/tweet'
 
 class ApplicationController < Sinatra::Base
 
