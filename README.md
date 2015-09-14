@@ -20,6 +20,10 @@ Fork and clone this repository to get started!
 
 To begin, we'll be building out the Sinatra file structure from scratch. While we do, we'll talk about what each file is doing and the different responsibilites of our application. We could, if we wanted to, write our entire application in one file, but it would be very difficult to read and debug. Keeping things organized is called "seperation of concerns" and is an important concept when prgoramming. Let's start building out our file structure. 
 
+### 0). Create your Project Directory
+
+Since you're building this project from scratch (as opposed to forking and cloning some pre-written code), you'll need to set up your root project directory. In your development directory, create a new directory called `fwitter` and `cd` into it.
+
 ### 1). Gemfile
 
 What's the first thing we do when running a Sinatra application? If you answered `rackup` or `shotgun`, you're almost right. Before we even start up our server, we run `bundle install`. This command tells the bundler gem to look in the Gemfile of the main directory and install any of the gems listed there from rubygems.org. Remember, gems are just prewritten bundles of code that we can use in our application. Before we can use any of them, such as `sinatra` or `shotgun`, we want to make sure they're installed on our system. 
