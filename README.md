@@ -88,7 +88,7 @@ Make a directory called `public` and inside, create directories for `css`, `js`,
 
 ### 5). application_controller.rb
 
-Inside of `app/controllers` create a file called `application_controller.rb` Here, we'll define our routes, actions, and pass data from the models into our views. 
+Inside of `app/controllers` create a file called `application_controller.rb` Here, we'll define our routes, actions, and pass data from the models into our views. (In previous labs and lessons, this file has been called `app.rb`)
 
 First, let's require the enviornment.rb file so that all of our gems get imported. 
 
