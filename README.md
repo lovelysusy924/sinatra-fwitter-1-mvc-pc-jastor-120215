@@ -177,7 +177,7 @@ Now, Sinatra will look for our ERB files in our 'app/views' directory. Refresh t
 
 ### 7). tweet.rb
 
-Now that our structure is stubbed out, let's start actually building Twitter! To being, let's create a model to represent a tweet. Create a new file called `tweet.rb` inside of 'app/models'. Inside of this file, define a class called `Tweet`
+Now that our structure is stubbed out, let's start actually building Twitter! To begin, let's create a model to represent a tweet. Create a new file called `tweet.rb` inside of 'app/models'. Inside of this file, define a class called `Tweet`
 
 ```ruby
 class Tweet
@@ -185,7 +185,7 @@ class Tweet
 end
 ```
 
-Our tweets should be initialized with two attributes for now - a username and a status to represent the content.
+Our tweets should be initialized with two attributes for now - a username and a status to represent the content. We use an `initialize` method to ensure that new tweets must have both of these attributes to be instatiated.
 
 ```ruby
 class Tweet
@@ -261,7 +261,7 @@ class Tweet
 end
 ```
 
-Awesome - now, any new tweet that gets created will be held in that array. Currently, though, there's no way to access that class variable outside of the class. Let's make a class method that returns the array. Class methods work just like instance methods, expect we'll call them on our class of `Tweet` instead of instances of tweets. Remember earlier when we used `Bundler.require`? That's a class method. We can define the scope of our methods again by using self. 
+Awesome - now any new tweet that gets created will be held in that array. Currently, though, there's no way to access that class variable outside of the class. Let's make a class method that returns the array. Class methods work just like instance methods, expect we'll call them on our class of `Tweet` instead of instances of tweets. Remember earlier when we used `Bundler.require`? That's a class method. We can define the scope of our methods again by using self. 
 
 ```ruby
 class Tweet
