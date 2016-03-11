@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fwitter</title>
+  </head>
+  <body>
+ 
+      <h1>Welcome to Fwitter!</h1>
+      <p>Any similarities to other social media applications are purely coincidental.</p>
+     <ul>
+         <% @tweets.each do |tweet| %>
+         <li>
+             <% tweet.username %> says:
+             <% tweet.status %>
+         </li>
+         <% end %>
+     </ul>
+ 
+  </body>
+</html>
